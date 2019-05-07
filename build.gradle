@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    testLogging.showStandardStreams = true
+    testLogging.exceptionFormat = 'full'
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.hamcrest:hamcrest:2.1'
+    compileOnly('org.projectlombok:lombok:1.16.20')
+    annotationProcessor 'org.projectlombok:lombok:1.16.20'
+}
